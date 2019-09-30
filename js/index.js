@@ -46,6 +46,7 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 const Links = document.getElementsByTagName('a');
 Array.from(Links).forEach((link) => {
   link.textContent = "Services";
+  link.style.color = 'green';
 })
 
 Links[1].textContent = "Product";
@@ -53,6 +54,20 @@ Links[2].textContent = "Vision";
 Links[3].textContent = "Features";
 Links[4].textContent = "About";
 Links[5].textContent = "Contact";
+
+const newLink = document.createElement('append');
+newLink.textContent = 'Append Link';
+newLink.style.color = 'green';
+
+const secondaryLink = document.querySelector('nav');
+secondaryLink.appendChild(newLink);
+
+const newNewLink = document.createElement('prepend');
+newNewLink.textContent = 'Prepend Link';
+newNewLink.style.color = 'green';
+
+const thirdLink = document.querySelector('nav');
+thirdLink.prepend(newNewLink);
 
 //------------------ CTA ---------------------------------
 
